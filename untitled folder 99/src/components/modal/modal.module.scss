@@ -1,0 +1,135 @@
+.outer_container{
+  position: absolute;
+  width: 100%;
+  height: 1500px;
+  top: 0;
+  background-color:rgba(0,0,0,0.7);
+}
+@media(max-width:980px){
+  .outer_container{
+height: 2100px;
+  }
+}
+.modal_main_container{
+  width:1000px;
+  
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  background-color: #fff;
+  transform: translate(-50%,-50%);
+  border: 2px solid black;
+  border-radius: 7px;
+  color: green;
+}
+.close_btn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 7px;
+  background-color:rgba(0,0,0,0.3);
+  color: #fff;
+  left: 1160px;
+  border:none;
+top:-50px
+}
+.modal_btn{
+  width: 60px;
+  height: 60px;
+ margin-top: 180px;
+  background-color:lightslategrey;
+  color: #fff;
+border: transparent;
+border-radius:75px ;
+}
+.modal_img{
+  width: 600px;
+  height: 600px;
+}
+.comments{
+  width: 40%;
+
+  margin-top: 100px;
+}
+
+.comment{
+  color: black;
+  margin-top: 40px;
+  margin-left:7px ;
+  margin-right: 7px;
+  padding: 5px;
+}
+.user_img{
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+ 
+}
+.user_name_container{
+  position: absolute;
+  display: flex;
+  gap:15px;
+  top:0;
+  left:650px
+}
+.svg{
+  width: 2em; height: 2em;vertical-align: middle;fill: #000;overflow: hidden;
+ cursor:pointer;margin-left: -250px;
+}
+.modal_span{
+  color: #000;
+}
+.comment_container{
+  width: 400px;
+  height: 100px;
+  display: flex;
+  gap:15px;
+  align-items: center;
+}
+.user_container{
+
+  display: flex;
+}
+.comment_user_img{
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+.user_name{
+  color: dimgrey;
+  margin-left: 5px;
+}
+@media(max-width:600px){
+
+
+  .modal_main_container{
+    width: 600px;
+    position: absolute;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+  }
+.comment_user_img{
+  display: none;
+}
+  .user_name_container{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    top: 630px;
+  }
+  .outer_container{
+    position: absolute;
+
+    height: 3500px;
+  }
+}

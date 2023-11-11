@@ -1,0 +1,14 @@
+.cards_wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 10px;
+}
+@media(max-width:600px){
+  .cards_wrapper{
+    margin-top: 200px;
+  }
+
+}

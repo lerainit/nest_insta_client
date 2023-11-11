@@ -1,0 +1,148 @@
+.header{
+  width: 280px;
+  height:2000;
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+@media(max-width:600px){
+
+
+  .header{
+    display: none;
+  }
+
+}
+
+.logo{
+  color:black;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+
+}
+.cart{
+  width: 40px;
+  height: 30px;
+  margin-top: 25px;
+
+ 
+  border-radius: 22px;
+ 
+}
+.favorite_img{
+  width: 40px;
+  height: 30px;
+  margin-top: 35px;
+  border-radius: 22px;
+  margin-left:185px;
+ 
+}
+.container{
+  width: 400px;
+  display: flex;
+ flex-direction: column;
+  color: darkslategrey;
+ 
+
+}
+.button_container{
+  width: 200px;
+  height: 70px;
+
+}
+.cart_link{
+    text-decoration: none;
+    color: cadetblue;
+    display: flex;
+    width: 250px;
+    height: 70px;
+}
+.fav_link{
+    text-decoration: none;
+    color:darkslategray;
+    width: 250px;
+    height: 70px;
+    
+}
+.cart_link h2{
+ font-size: 20px;
+
+ margin-left:15px ;
+ 
+} 
+.fav_link h2{
+ font-size: 20px;
+
+ margin-left: 155px;
+ 
+}
+.user_name{
+
+color:black;
+font-weight: 500;
+margin-top: 25px;
+font-size: 12px;
+
+
+}
+.auth_img{
+width: 60px;
+height: 60px;
+border-radius: 25px;
+position: absolute;
+top: 10px;
+left:3px;
+}
+.auth_name{
+color:black;
+position: absolute;
+top:10px;
+right: 30px;
+
+}
+.auth_container{
+width: 200px;
+display: flex;
+align-items: center;
+border:1px solid #fff;
+position: relative;
+color: cadetblue;
+}
+.user_container{
+width:300px;
+margin-left: 100px;
+display: flex;
+
+
+}
+.user_container button{
+border-radius: 5px;
+background-color:transparent;
+color: cornflowerblue;
+border: none;
+font-size: 17px;
+font-weight: 600;
+margin-left: -25px;
+cursor: pointer;
+}
+.follower_container button{
+border-radius: 5px;
+background-color:transparent;
+color: cornflowerblue;
+border: none;
+font-size: 17px;
+font-weight: 600;
+cursor: pointer;
+
+}
+.follower_container{
+margin-left: 60px;
+
+}
+.logout_btn{
+  height: 50px;
+}

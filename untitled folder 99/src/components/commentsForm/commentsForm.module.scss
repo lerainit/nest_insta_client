@@ -1,0 +1,30 @@
+
+.form{
+    width: 348px;
+    height: 45px;
+   outline: cadetblue;
+     position: relative;
+  border-radius: 7px;
+  border: 0.5px solid grey;
+ margin-left: 10px;
+    
+}
+@media(max-width:600px){
+
+  .form{
+    width: 300px;
+    margin-top: 40px;
+  }
+}
+.form_button{
+    width: 44px;
+    height: 20px;
+    border-radius: 5px;
+    
+}
+.error{
+position: absolute;
+top:500px;
+left:7px;
+
+}
