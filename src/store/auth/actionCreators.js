@@ -6,7 +6,7 @@ import axios from "axios";
 export const logIn = (authObj) => async (dispatch) => {
 
     try {
-        const {data} = await axios.post(`http://localhost:5002/auth/login`,authObj)
+        const {data} = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`,authObj)
 
 
   localStorage.setItem('token',JSON.stringify(data.token))
