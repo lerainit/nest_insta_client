@@ -15,7 +15,7 @@ const CommentsForm = (props) => {
   const comments = useSelector(store => store.comments.value)
   const users = useSelector(store => store.users.value)
   const authIndex = users.findIndex(({ isAuth }) => isAuth === true)
-    const postArr = comments.filter(el=>el.url == props.url)
+    const postArr = comments.filter(el=>el.id == props.id)
     const post = postArr[0]
 
   let initialValues = {
@@ -40,7 +40,7 @@ const CommentsForm = (props) => {
           post.comments.push(comment)
 
 
-       await fetch(`${process.env.REACT_APP_API_URL_POSTS}`, {
+       await fetch(`${process.env.REACT_APP_API_URL}/posts`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'

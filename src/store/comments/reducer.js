@@ -20,7 +20,7 @@ const commentsReducer = (state = initialValue, action) => {
            let postArr = action.payload.posts
            let comment = action.payload.comment
             let post = action.payload.post
-            let postIndex = postArr.findIndex(el=>el.url == post.url)
+            let postIndex = postArr.findIndex(el=>el.id == post.id)
 
             postArr[postIndex].comments.push(comment)
             postArr[postIndex].comments.reverse()
@@ -36,7 +36,7 @@ const commentsReducer = (state = initialValue, action) => {
             let postArr = action.payload.comments
 
 
-            let postIndex = postArr.findIndex(el=>el.url == action.payload.url)
+            let postIndex = postArr.findIndex(el=>el.id == action.payload.id)
             console.log(postIndex)
 
           postArr[postIndex].comments.forEach(el => el.isVisible = true)
