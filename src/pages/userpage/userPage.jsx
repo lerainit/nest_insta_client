@@ -20,7 +20,7 @@ const UserPage = () => {
 
     },[])
 
-/    /let user = useSelector(store =>store.users.user)
+//let user = useSelector(store =>store.users.user)
     let users = useSelector(store =>store.users.value)
 
    let userIndex = users?.findIndex(el => el.nickName == nickName)
