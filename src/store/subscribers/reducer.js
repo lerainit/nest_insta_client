@@ -23,7 +23,7 @@ const subscriberReducer = (state = initialValue, action) => {
       let subscribers = user.subscribers
       let authUser = users[action.payload.authIndex]
 
-      subscribers.push(authUser)
+      users[action.payload.index].subscribers.push(authUser)
       users[action.payload.index].subscribers = subscribers
 
       instance.put(`${process.env.REACT_APP_API_URL}/users`, user
@@ -40,7 +40,7 @@ const subscriberReducer = (state = initialValue, action) => {
       let subscribers = user.subscribers
 
 
-      subscribers.splice(action.payload.authIndex, 1)
+      userArr[0].subscribers.splice(action.payload.authIndex, 1)
      //user.subscribers = subscribers
 
       instance.put(`${process.env.REACT_APP_API_URL}/users`, user

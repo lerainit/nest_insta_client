@@ -15,11 +15,11 @@ const UserHeader = (props) => {
     let id = props.id
     const subscribers = useSelector(store => store.users.value)
     const authIndex = users?.findIndex(({ isAuth }) => isAuth === true)
-    const index = users?.findIndex(el => el.id == props.id)
+    const index = users?.findIndex(el => el.id == id)
     const postsOfUser = posts.filter(el=> el.user.id == id)
     console.log(index)
 
-    const user = users[index]
+    const user =   users? users[index] : null
 
 
     return (

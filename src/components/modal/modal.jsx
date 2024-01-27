@@ -21,6 +21,7 @@ const Modal = () => {
     const cardsOfUser = productsArr?.filter(el=> el.user.nickName === user.nickName)
 
   const userId = productsArr[userIndex1].userId
+  const cardId = cardsOfUser[index].id
 
   let counter = cardsOfUser[index]?.likes
   const authIndex = users.findIndex(({ isAuth }) => isAuth === true)
@@ -58,7 +59,7 @@ const Modal = () => {
              </g>	</g>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g>
        </g>
        </svg>
-          <CommentsForm index={index} userIndex={userIndex1} userId={userId} />
+          <CommentsForm index={index} userIndex={userIndex1} userId={userId} id ={cardId}/>
 
           <button className={styles.close_btn} onClick={() => { dispatch(closeModalAC()) }}>X</button>
 

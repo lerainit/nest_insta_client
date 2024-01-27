@@ -20,13 +20,13 @@ const UserPage = () => {
 
     },[])
 
-let user = useSelector(store =>store.users.user)
+/    /let user = useSelector(store =>store.users.user)
     let users = useSelector(store =>store.users.value)
 
-let userIndex = users?.findIndex(el => el.nickName == nickName)
+   let userIndex = users?.findIndex(el => el.nickName == nickName)
+   let user = users[userIndex]
 
 
-console.log(user)
 
      const cardsArr = useSelector(store => store.products.value, shallowEqual)
 

@@ -96,8 +96,8 @@ const PostsPage = () => {
                         counterArr[counterArr.findIndex(el =>el.id == id)]?.likes.filter(el=>el.id == authUser.id).length >0?  dispatch(incrementLikesAC({ users:users,authIndex:authIndex,counter:counterArr,id:id})) : dispatch(decrementLikesAC({ users:users,authIndex:authIndex,counter:counterArr,id:id} ))
 
                     }} />
-                        {commentsArr[commentsArr.findIndex(el =>el.id == id)]?.comments.map((el, index) => el.isVisible ? <div  key={index} className={styles.comments_container}><h3 className={styles.comment_user_name}>{users[el.userIndex]?.name}</h3><h3 className={styles.comment_user_text}>{el.text}</h3></div> : null)}
-                        {commentsArr[commentsArr.findIndex(el =>el.id == id)]?.comments.length > 1 && ! commentsArr[commentsArr.findIndex(el =>el.id == id)]?.comments[1].isVisible ? <button className={styles.showmore_btn} onClick={() => {
+                        {commentsArr[commentsArr.findIndex(el =>el.id === id)]?.comments.map((el, index) => el.isVisible ? <div  key={index} className={styles.comments_container}><h3 className={styles.comment_user_name}>{users[el.userIndex]?.name}</h3><h3 className={styles.comment_user_text}>{el.text}</h3></div> : null)}
+                        {commentsArr[commentsArr.findIndex(el =>el.id === id)]?.comments.length > 1 && ! commentsArr[commentsArr.findIndex(el =>el.id == id)]?.comments[1].isVisible ? <button className={styles.showmore_btn} onClick={() => {
                             dispatch(showCommentsAC({  id:id, posts: comments,comments:commentsArr,index:index }))
 
                         }}>Show more</button> : null}

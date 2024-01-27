@@ -33,7 +33,8 @@ const commentsReducer = (state = initialValue, action) => {
         }
 
         case showComments: {
-            let postArr = action.payload.comments
+            let postArr = state.value
+            //action.payload.comments
 
 
             let postIndex = postArr.findIndex(el=>el.id == action.payload.id)
