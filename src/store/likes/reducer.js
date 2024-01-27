@@ -21,16 +21,16 @@ const likesReducer = (state = initialValue, action) => {
 
       let user = action.payload.users[action.payload.authIndex]
         console.log(action.payload)
-     let post =   counterArr.filter(el =>el.url == action.payload.url);
+     let post =   counterArr.filter(el =>el.id == action.payload.id);
 
 
      console.log(post)
-      post[0].likes.push(user)
+      post[0]?.likes.push(user)
 
         console.log(post)
       let  postObj = post[0]
 
-     instance.put(`${process.env.REACT_APP_API_URL_POSTS}`, postObj
+     instance.put(`${process.env.REACT_APP_API_URL}/posts`, postObj
        )
 
       return { counter: counterArr, isLoading: false }
@@ -43,12 +43,12 @@ const likesReducer = (state = initialValue, action) => {
 
         let user = action.payload.users[action.payload.authIndex]
         console.log(action.payload)
-        let post =   counterArr.filter(el =>el.url == action.payload.url);
+        let post =   counterArr.filter(el =>el.id == action.payload.id);
 
 
         console.log(post)
       let userIndex =   post[0].likes.findIndex(el =>el.id == user.id)
-        post[0].likes.splice(userIndex,1)
+        post[0]?.likes.splice(userIndex,1)
 
 
         console.log(post)

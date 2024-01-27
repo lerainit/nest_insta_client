@@ -1,4 +1,6 @@
 import { setToken,setUser,logOut,setLogin } from "./actions";
+import instance from "../../instance";
+
 const initialValue = {
     token: JSON.parse(localStorage.getItem('token')) | null,
     isLoggedIn:JSON.parse(localStorage.getItem('loggedIn')) | false ,
@@ -22,6 +24,12 @@ const AuthReducer = (state = initialValue, action) => {
         }
         case logOut: {
             localStorage.clear()
+            let user = action.payload;
+            console.log(user)
+          //  user.isAuth = false;
+
+      instance.put(`${process.env.REACT_APP_API_URL}/auth/logout`, user
+      )
 
             return {...state, user: action.payload}
         }

@@ -15,6 +15,8 @@ const Navigation = () => {
   const dispatch = useDispatch()
   const users = useSelector(store => store.followers.value)
   const authIndex = users?.findIndex(({ isAuth }) => isAuth === true)
+  const authUser = users?.filter(el=>el.isAuth === true)[0]
+  console.log(authUser)
 
   return (
 
@@ -22,7 +24,7 @@ const Navigation = () => {
 
       <NavLink className={styles.logo} to='/' ><h2 className={styles.logo} >Instagram</h2 ></NavLink>
         <button className='logout_btn' onClick={()=>{
-            dispatch({type:'logOut'})
+            dispatch({type:'logOut',payload:authUser})
             window.location.reload()
         }}>Log out</button>
       <div className={styles.auth_container}>

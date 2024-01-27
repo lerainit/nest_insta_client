@@ -28,9 +28,9 @@ let userIndex = users?.findIndex(el => el.nickName == nickName)
 
 console.log(user)
 
-     const cardssArr = useSelector(store => store.products.value, shallowEqual)
+     const cardsArr = useSelector(store => store.products.value, shallowEqual)
 
-    const cardsOfUser = cardssArr?.filter(el=> el.user.nickName === nickName)
+    const cardsOfUser = cardsArr?.filter(el=> el.user.nickName == nickName)
    
 
      const posts = useSelector(store => store.comments.value)

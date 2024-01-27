@@ -1,7 +1,7 @@
 import { setCards } from "./actions";
 
 const initialValue = {
-    value: JSON.parse(localStorage.getItem('products')),
+    value: JSON.parse(localStorage.getItem('products')) || [],
     isLoading: true
 }
 

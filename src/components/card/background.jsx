@@ -7,9 +7,10 @@ import styles from './userCard.module.scss'
 const Background = ({ handleClick, comments, index, userIndex,cards }) => {
 
   const postsArr = useSelector(store => store.counter.counter)
-  let counter = postsArr[index].likes
+  let userCards = postsArr.filter(el=>el.userId === cards[0].userId)
+  let counter = userCards[index].likes
 
-
+console.log(postsArr[index])
 
 
   return (

@@ -29,26 +29,12 @@ const App = () => {
 
   useEffect(() => {
 
-  /* dispatch(setPostsAC())
-    dispatch(setCardsAC())
-    dispatch(setUsersAC())
-    dispatch(setCounterAC())
-    dispatch(setBackgroundAC())
-    dispatch(setSubscribersAC())
-    dispatch(setCommentsAC())
-    dispatch(setFollowersAC())*/
+
 
     
   }, [])
 
-  /*if ( ) {
-    return (
-      <>
-        <h1>LOADING</h1>
-      </>
-    )
-  }
-  else {*/
+
     return (
       <>
         <div className='App'>
@@ -61,7 +47,7 @@ const App = () => {
 
       </>
     );
- // }
+
 }
 
 export default App

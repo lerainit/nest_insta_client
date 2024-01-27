@@ -43,7 +43,7 @@ const Modal = () => {
 
           <svg onClick={async () => {
             await dispatch(setCounterAC())
-              counter.filter(el=>el.id == authUser.id).length >0 ?  dispatch(decrementLikesAC({ users:users,authIndex:authIndex,counter:productsArr,url:cardsOfUser[index].url})) : dispatch(incrementLikesAC({users:users,authIndex:authIndex,counter:productsArr, url:cardsOfUser[index].url}))
+              counter.filter(el=>el.id == authUser.id).length >0 ?  dispatch(decrementLikesAC({ users:users,authIndex:authIndex,counter:productsArr,id:cardsOfUser[index].id})) : dispatch(incrementLikesAC({users:users,authIndex:authIndex,counter:productsArr, id:cardsOfUser[index].id}))
 
           }}  className={styles.svg} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
           viewBox="0 0 32 32">

@@ -4,11 +4,13 @@ import { useDispatch } from 'react-redux';
 import { openModalAC } from '../../store/modal/actionCreators';
 import PropTypes from 'prop-types'
 import { renderBackgroundAC } from '../../store/cardBackground/actionCreators';
-import { hideBackgroundAC } from '../../store/cardBackground/actionCreators';
+import { hideBackgroundAC,setBackgroundAC } from '../../store/cardBackground/actionCreators';
 import Background from './background';
 import { setCardsAC } from '../../store/cards/actionCreator';
 import { setUserIndexAC } from '../../store/userIndex/actionCreators'
 import { setCommentsAC } from '../../store/comments/actionCreators';
+
+
 
 
 const Card = ({ userPosts,  id,userIndex, index, background, url }) => {
